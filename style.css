@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#titolo-principale {
+    color: #b3002f; /* Rosso Roma */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#link-wiki {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#link-wiki:hover {
+    background-color: #b3002f;
+}
