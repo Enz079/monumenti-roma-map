@@ -76,3 +76,50 @@ body {
 #btn-statistiche:hover {
     background-color: #b3002f;
 }
+
+#btn-tabella {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+#btn-tabella:hover {
+    background-color: #b3002f;
+}
+
+#tabella-container {
+    margin: 20px auto;
+    max-width: 500px;
+    overflow-x: auto;
+}
+
+#tabella-monumenti {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#tabella-monumenti td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+/* Alterna i colori delle righe */
+#tabella-monumenti tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tabella-monumenti tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#tabella-monumenti tr:hover {
+    background-color: #f0f0f0;
+}
