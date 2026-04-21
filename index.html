@@ -19,6 +19,18 @@
 
     <a id="link-wiki" href="https://it.wikipedia.org/wiki/Roma" target="_blank">Scopri Roma su Wikipedia</a>
 
+    <div id="form-container">
+        <h3>Aggiungi un nuovo monumento</h3>
+        <form id="monumento-form">
+            <input type="text" id="nome-monumento" placeholder="Nome del monumento" required>
+            <input type="number" id="lat-monumento" placeholder="Latitudine" step="any" required>
+            <input type="number" id="lng-monumento" placeholder="Longitudine" step="any" required>
+            <button type="submit">Aggiungi monumento</button>
+        </form>
+    </div>
+
+    <button id="btn-statistiche">Mostra statistiche monumenti</button>
+
     <script src="monumenti.js"></script>
     <script src="script.js"></script>
 </body>
