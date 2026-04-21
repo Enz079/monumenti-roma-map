@@ -44,3 +44,46 @@ const btnStatistiche = document.getElementById('btn-statistiche');
 btnStatistiche.addEventListener('click', function() {
     mostraStatisticheMonumenti();
 });
+
+const btnTabella = document.getElementById('btn-tabella');
+let tabellaEsistente = false;
+
+btnTabella.addEventListener('click', function() {
+
+    const container = document.getElementById('tabella-container');
+    
+    //Pulisce il contenitore se esiste già
+    container.innerHTML = '';
+    
+    //Ottiene la lista aggiornata
+    const listaMonumenti = ottieniListaMonumenti();
+    
+    const tabella = document.createElement('table');
+    tabella.setAttribute('id', 'tabella-monumenti');
+    
+    const tbody = document.createElement('tbody');
+    
+    //Popola la tabella con i monumenti
+    listaMonumenti.forEach((monumento, index) => {
+        const riga = document.createElement('tr');
+        
+        //Colonne
+        const cellaNumero = document.createElement('td');
+        cellaNumero.textContent = index + 1;
+        riga.appendChild(cellaNumero);
+        
+        const cellaLat = document.createElement('td');
+        cellaLat.textContent = monumento.lat;
+        riga.appendChild(cellaLat);
+        
+
+        const cellaLng = document.createElement('td');
+        cellaLng.textContent = monumento.lng;
+        riga.appendChild(cellaLng);
+        
+        tbody.appendChild(riga);
+    });
+    
+    tabella.appendChild(tbody);
+    container.appendChild(tabella);
+});
